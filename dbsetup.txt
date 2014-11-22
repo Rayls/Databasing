@@ -1,0 +1,34 @@
+create table part(
+	part_number INT NOT NULL AUTO_INCREMENT,
+	price INT NOT NULL,
+	description VARCHAR(200) NOT NULL,
+	quantity INT NOT NULL,
+	PRIMARY KEY(part_number)
+);
+
+# bunked up. Do in phpmyadmin
+
+create table component(
+	part_number INT NOT NULL,
+	price INT NOT NULL,
+	quantity INT NOT NULL,
+	order_number INT NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY(part_number, quantity, order_number),
+	FOREIGN KEY(price) REFERENCES part(price), 
+	FOREIGN KEY(part_number) REFERENCES part(part_number)
+);
+
+create table supplier(
+	supplier_name VARCHAR(100),
+	address VARCHAR(200) NOT NULL, 
+	tel_number INT NOT NULL,
+	PRIMARY KEY(supplier_name)
+);
+
+create table invoice(
+	invoice_number INT AUTO_INCREMENT NOT NULL,
+	supplier_name VARCHAR(100),
+	date DATE NOT NULL,
+	PRIMARY KEY(order_number),
+	FOREIGN KEY(supplier_name) REFERENCES supplier(supplier_name)
+);
