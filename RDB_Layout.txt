@@ -1,0 +1,86 @@
+Starred Items are primary keys.
+
+Cars: 
+*ID#
+Plate#
+Model (Foreign Key from Car-Model-List)
+Province
+Year of Manufacture
+Colour
+
+MUC-Owned-Car:
+*ID#  (Foreign Key from Cars)
+Serial#
+Price
+km Driven
+Laster Owner ID# (Foreign Key from Customers)
+Date Purchased
+Purchased For
+Repair cost
+Date repair quote given
+
+Car-Model-List:
+*Model
+Make
+Type
+
+Repair Transaction:
+*Transaction#
+Customer# (Foreign Key from Customers)
+Car ID# (Foreign Key from Cars)
+Price
+Date
+
+Customer: 
+*Customer#
+First Name
+Last Name
+Address
+Home Phone#
+Business#
+
+Hourly Employee:
+*Employee# (Foreign Key from Customers)
+SIN
+Start Date
+Termination Date
+Job description
+Current Pay
+
+Salaried Employee:
+*Employee# (Foreign Key from Customers)
+SIN
+Start Date
+Termination Date
+Job Description
+Current Salary
+
+Pay-History:
+*Employee# (Foreign Key from Customers)
+*Date
+Hourly Rate
+Hours Today
+
+
+Salary-History:
+*Employee# (Foreign Key from Customers)
+*Year
+Salary
+
+Sale:
+*Customer# (Foreign Key from Customers)
+*Employee# (Foreign Key from Customers)
+Car ID# (Foreign Key from Cars)
+Price
+Date
+
+Yearly Expenses:
+*Year
+Rent
+
+Monthly Expenses:
+*Year  (Foreign Key from Yearly Expenses)
+*Month
+Heat total
+Water total
+Electricity total
