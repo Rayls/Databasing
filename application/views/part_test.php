@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>part test?</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href= <?php echo base_url("styles/styles.css"); ?> >
 </head>
 <body>
 	<h1>This is yet another test!</h1>
