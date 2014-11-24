@@ -1,0 +1,21 @@
+/* Susy Tests */
+/* ========== */
+
+@import "susy";
+@import "true";
+@import "test/helpers";
+
+// test that susyone settings don't cause errors in susy
+@import "susy/language/susyone/settings";
+
+// Test
+// ----
+
+$default-module-output: css;
+
+$output-test-context: false;
+$output-test-results: true;
+
+@import "tests";
+
+@include report;

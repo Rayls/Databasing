@@ -1,0 +1,91 @@
+// Output Test Layout
+// ==================
+
+@import "compass/reset";
+@import "compass/css3/images";
+@import "compass/css3/background-clip";
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$rhythm-unit: rem;
+
+@include establish-baseline;
+
+html { font-family: sans-serif; }
+body { padding: rhythm(1); }
+h1 { font-weight: bold; }
+
+[role="banner"] { @include adjust-font-size-to(24px); }
+
+.results {
+  @include rhythm-margins(1);
+  @include rhythm-borders(1px,1);
+  background-color: rgba(red, .25);
+  border-color: red;
+
+  &:before {
+    content: 'Unit Tests: ';
+    font-weight: bold;
+  }
+
+  &:before, &:after {
+    display: inline;
+  }
+}
+
+.test-module {
+  @include trailing-border(6px);
+  @include trailer(.5);
+  border-style: dotted;
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border: 0;
+  }
+
+  > h1 {
+    @include adjust-font-size-to(24px);
+    @include trailer(.5);
+  }
+}
+
+[class^="test__"] {
+  @include trailer(.5);
+
+  h1 {
+    padding: rhythm(.25) rhythm(.5);
+    background: #666;
+    color: #eee;
+    font-weight: normal;
+    font-family: monospace, sans-serif;
+  }
+}
+
+[class^="assert__"] {
+  @include trailer(.5);
+  text-align: center;
+
+  div {
+    background: rgba(white,.25);
+    outline: 1px solid rgba(red,.25);
+    outline-offset: -1px;
+  }
+
+  .test, .expect {
+    @include trailer(.5);
+    @include adjust-font-size-to(14px);
+    @include background(
+      linear-gradient(to left, rgba(white,.75), rgba(white,.75)), rgba(#fcc,.5));
+    @include background-clip(content-box, border-box);
+  }
+
+  .test { outline-color: red; }
+  .expect { outline-color: green; }
+
+  .spacer {
+    height: rhythm(2.5);
+    outline: 1px solid rgba(#444,.25);
+    background: rgba(#444,.125);
+  }
+}
