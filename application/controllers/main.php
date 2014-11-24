@@ -12,6 +12,8 @@ public function __construct()
 		$this->load->model('supplier_model');
 		$this->load->model('order_model');
 		$this->load->model('test_model');
+
+		$this->load->helper('form');
 	}
 
 	public function index()

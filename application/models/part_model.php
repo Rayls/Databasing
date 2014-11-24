@@ -25,18 +25,9 @@ class Part_model extends CI_Model {
 	}
 
 
-public function get_parts($number = NULL)
+public function get()
 	{
-		if($number != NULL)
-		{
-			$part = $this->input->post('part_number');
-			$query = $this->db->get_where('part_number', $part);
-		}
-		else
-		{
-			$query = $this->db->get("part");
-		}
-
+		$query = $this->db->get('part');
 		return $query;
 	}
 

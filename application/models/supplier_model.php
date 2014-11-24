@@ -23,16 +23,7 @@ class Supplier_model extends CI_Model {
 
 	public function get($name = NULL)
 	{
-		if($name != NULL)
-		{
-			$supplier = $this->input->post('supplier_name');
-			$query = $this->db->get_where('supplier_name', $supplier);
-		}
-		else
-		{
-			$query = $this->db->get("supplier");
-		}
-
+		$query = $this->db->get('supplier');
 		return $query;
 	}
 }
