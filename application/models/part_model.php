@@ -15,8 +15,15 @@ class Part_model extends CI_Model {
 		$entry['description'] = $this->input->post('description');
 		$entry['quantity'] = $this->input->post('quantity');
 
-		$success = $this->db->insert('part', $entry);
+
+		#tests for successful insertion. Returns success/fail as boolean value.
+		$this->db->insert('part', $entry);
+		$num_inserts = $this->db->affected_rows();
+
+		if($num_inserts == 0){return true;}
+		else{return false;}
 	}
+
 
 public function get_parts($number = NULL)
 	{
