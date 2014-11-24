@@ -4,4 +4,5 @@
 	<meta charset="UTF-8">
 	<title>Databasing</title>
 	<link rel="stylesheet" type="text/css" href="http://localhost/db/styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
