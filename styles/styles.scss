@@ -2,3 +2,12 @@
 /* @import "neat/neat"; */
 @import "base/base";
 @import "susy/sass/susy";
+
+body{
+	background-color: 'grey',
+
+}
+
+input, textarea{
+	max-width: 300px;
+}

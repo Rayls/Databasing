@@ -222,4 +222,10 @@ input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap; }
 
+body {
+  background-color: "grey"; }
+
+input, textarea {
+  max-width: 300px; }
+
 /*# sourceMappingURL=styles.css.map */

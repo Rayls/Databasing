@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Add Parts</title>
-	<link rel="stylesheet" type="text/css" href= <?php echo base_url("styles/styles.css"); ?> >
-</head>
+
 <body>
 	<h1>Add Parts to Inventory</h1>
 

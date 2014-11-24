@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Add Items</title>
-	<link rel="stylesheet" type="text/css" href="styles/styles.css">
-</head>
+
 <body>
 	<h1>Add Items to Invoice</h1>
 

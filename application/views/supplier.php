@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Add Suppliers</title>
-	<link rel="stylesheet" type="text/css" href="styles/styles.css">
-</head>
+
 <body>
 	<h1>Add Suppliers</h1>
 

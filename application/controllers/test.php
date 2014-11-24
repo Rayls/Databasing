@@ -21,10 +21,35 @@ public function __construct()
 
 	public function index()
 	{
-		$this->load->view('invoice_test');
+		$this->load->view('header');
+		$this->load->view('main');
 	}
 
-	# implement error handling for failed query attempts.
+	public function supplier()
+	{
+		$this->load->view('header');
+		$this->load->view('supplier');
+	}
+
+	public function invoice()
+	{
+		$this->load->view('header');
+		$this->load->view('invoice');
+	}
+
+	public function part()
+	{
+		$this->load->view('header');
+		$this->load->view('part');
+	}
+
+	public function tables()
+	{
+		$this->load->view('header');
+		$this->load->view('main'); # need tables page
+	}
+
+	#supplier functions are simply titled add() and display()
 
 	public function add()
 	{
@@ -64,12 +89,13 @@ public function __construct()
 
 	public function add_component()
 	{
-		$this->part_model->add_new();
+		$this->component_model->add_new();
 	}
 
 	public function display_component()
 	{
-		$result = $this->part_model->get();
+		$result = $this->component_model->get();
 		print_r($result);
+	}
 }
 
